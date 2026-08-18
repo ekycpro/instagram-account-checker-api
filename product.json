@@ -1,0 +1,63 @@
+{
+  "name": "Instagram Checker API",
+  "brand": "eKYC Pro",
+  "repository": "ekycpro/instagram-account-checker-api",
+  "description": "Synchronous instagram checks using one phone number or email address according to service_type.",
+  "official_site": "https://ekycpro.com",
+  "landing_page": "https://ekycpro.com/tools/instagram",
+  "canonical_docs": "https://docs.ekycpro.com/instagram-number-checker",
+  "base_url": "https://api.ekycpro.com",
+  "auth": {
+    "type": "api_key",
+    "header": "X-API-Key"
+  },
+  "mode": "sync",
+  "endpoints": {
+    "check": {
+      "method": "POST",
+      "path": "/v1/check"
+    },
+    "balance": {
+      "method": "GET",
+      "path": "/v1/balance"
+    }
+  },
+  "products": [
+    {
+      "type": "instagram",
+      "name": "Instagram Checker",
+      "inputKind": "phone",
+      "min_inputs": 1,
+      "max_inputs": 1,
+      "docs_url": "https://docs.ekycpro.com/instagram-number-checker",
+      "fields": [
+        "id",
+        "identifier",
+        "registered",
+        "billed",
+        "cost",
+        "cost_usd"
+      ]
+    },
+    {
+      "type": "instagram_email",
+      "name": "Instagram Email Checker",
+      "inputKind": "email",
+      "min_inputs": 1,
+      "max_inputs": 1,
+      "docs_url": "https://docs.ekycpro.com/instagram-email-checker",
+      "fields": [
+        "id",
+        "identifier",
+        "registered",
+        "billed",
+        "cost",
+        "cost_usd"
+      ]
+    }
+  ],
+  "pricing_url": "https://ekycpro.com/pricing",
+  "maintainer": "eKYC Pro",
+  "license": "MIT",
+  "last_reviewed": "2026-08-18"
+}
